@@ -25,6 +25,7 @@ void percent(char *s);
 void character(char *c);
 void string(char *s);
 int (*get_op_func(char *s))(char *);
+int (*spec_check(char *))(va_list);
 int _putchar(char c);
 
 #endif
