@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			}
 
 			count++;
-			i++;
+			i += 2;
 			continue;
 		}
 		else
@@ -67,10 +67,11 @@ int _printf(const char *format, ...)
 				/*handle escape characters*/
 			}
 	}
-//	str = va_arg(arg, char *);
-		/*check_spec(format[i + 1], str);*/
-//	printf("%s", str);
-//	va_end(arg);
+/**	str = va_arg(arg, char *);
+	check_spec(format[i + 1], str);
+	printf("%s", str);
+	va_end(arg);
+*/
 		printf("%d", len);
 		printf("%d", count);
 		return (count);
