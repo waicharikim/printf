@@ -30,4 +30,6 @@ int _putchar(char c);
 int _printc(va_list);
 int _prints(va_list);
 int _printpc(va_list);
+int _printd(va_list);
+int _printb(va_list);
 #endif

@@ -12,15 +12,17 @@ int _prints(va_list arg)
 {
 	char *str;
 	int count;
+	int i;
 
+	i = 0;
 	count = 0;
 
 	str = va_arg(arg, char *);
-	while (str)
+	while (str[i])
 	{
-		_putchar(*str);
+		_putchar(str[i]);
 		count++;
-		str = va_arg(arg, char *);
+		i++;
 	}
 		return (count);
 }

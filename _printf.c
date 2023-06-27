@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	int count; /*count printed output*/
 	int i;
 	int len;
-	const char *str;
 	va_list arg;
 	int (*spec_fun)(va_list);
 
@@ -23,8 +22,6 @@ int _printf(const char *format, ...)
 	i = 0;
 	count = 0;
 
-	for (len = 0, str = format; *str; str++, len++)
-		;
 	while (format[i]) /* iterate through the
 			     string format while format != NULL */
 	{
@@ -40,10 +37,8 @@ int _printf(const char *format, ...)
 			spec_fun = spec_check(&format[i + 1]);
 			if (spec_fun)
 			{
-				spec_fun(arg);
+				count += spec_fun(arg);
 			}
-
-			count++;
 			i += 2;
 			continue;
 		}
@@ -67,12 +62,6 @@ int _printf(const char *format, ...)
 				/*handle escape characters*/
 			}
 	}
-/**	str = va_arg(arg, char *);
-	check_spec(format[i + 1], str);
-	printf("%s", str);
 	va_end(arg);
-*/
-		printf("%d", len);
-		printf("%d", count);
-		return (count);
+	return (count);
 }

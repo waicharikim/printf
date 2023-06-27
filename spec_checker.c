@@ -12,10 +12,13 @@
 int (*spec_check(const char *c))(va_list)
 {
 	int i;
-	op_t spec_list[3] = {
+	op_t spec_list[6] = {
 		{"c", _printc},
 		{"s", _prints},
-		{"%", _printpc}};
+		{"%", _printpc},
+		{"d", _printd},
+		{"i", _printd},
+		{"b", _printb}};
 
 		for (i = 0; i < 3; i++)
 		{
