@@ -19,9 +19,9 @@ int (*spec_check(const char *c))(va_list)
 
 		for (i = 0; i < 3; i++)
 		{
-			if (spec_list[i].op == c)
+			if (*(spec_list[i].op) == *c)
 			{
-				return (*(spec_list[i].f));
+				return (spec_list[i].f);
 
 			}
 		}
