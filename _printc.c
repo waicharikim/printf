@@ -20,4 +20,5 @@ int _printc(va_list arg)
 		_putchar(c);
 		return(count++);
 	}
+	return (0);
 }
