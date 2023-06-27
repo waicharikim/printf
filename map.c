@@ -22,7 +22,7 @@ int get_op_func(const char *fmt, int *j, va_list args)
 	i = 0;
 	while (ops[i].op)
 	{
-		if (fmt[*j] == ops[i].op)
+		if (fmt[*j] == *(ops[i].op))
 			ops[i].f(args);
 		i++;
 	}

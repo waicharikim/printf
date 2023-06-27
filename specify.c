@@ -16,7 +16,7 @@ int percent(va_list type)
 	{
 		exit(99);
 	}
-	else if (s == 37)
+	else
 		_putchar(37);
 	return (0);
 }
