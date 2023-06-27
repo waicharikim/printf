@@ -6,7 +6,7 @@
  * Return: pointer to the function that corresponds to the specifier
  */
 
-int get_op_func(char *s)(char)
+int get_op_func(char *s)(char *)
 {
 	op_t ops[] = {
 		{"%", percent},

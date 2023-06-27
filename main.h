@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdarg.h>
 
 /** Struct **/
 /**
@@ -23,7 +24,7 @@ int _printf(const char *format, ...);
 void percent(char *s);
 void character(char *c);
 void string(char *s);
-int (*get_op_func(char *s))(char);
+int (*get_op_func(char *s))(char *);
 int _putchar(char c);
 
 #endif

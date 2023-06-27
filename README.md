@@ -1,12 +1,16 @@
 ## Printf group project.
 
-Authors:
+Authors
+   - :x: Morrison Kimani.
+   - :x: Aaron Mwendwa.
 
-    - :x: Morrison Kimani
-    - :x: Aaron Mwendwa
+<br>
 
 In this project we recreated a similar function to `printf`.
 
-<hr>
+<br>
 
-##### ©ALXPROGRAM
+<hr>
+<p align="right">
+©ALXPROGRAM
+</p>

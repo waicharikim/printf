@@ -8,8 +8,10 @@
 void percent(char *s)
 {
 	if (!s)
-		write(2, Error, 5);
-	else if (s == '%')
+	{
+		exit(99);
+	}
+	else if (*s == 37)
 		_putchar(37);
 	return;
 }
@@ -21,10 +23,12 @@ void percent(char *s)
 
 void character(char *c)
 {
-	if (*(c + 1) != NULL || !c)
-		write(2, Error, 5);
+	if (!c)
+	{
+		exit(99);
+	}
 	else
-		_putchar(c);
+		_putchar(*c);
 
 	return;
 }
@@ -39,10 +43,13 @@ void string(char *s)
 	int i;
 
 	if (!s)
-		write(2, Error, 5);
+	{
+		exit(99);
+	}
 	else
 	{
 		i = 0;
+
 		while (s[i])
 		{
 			_putchar(s[i]);

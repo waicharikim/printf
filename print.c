@@ -8,11 +8,11 @@
 
 int _printf(const char *format, ...)
 {
-	int i, count = 0;
-	/*int (*func)(char *);
+	int i;
+	int (*func)(char *);
 	va_list args;
 
-	va_start(args, format);*/
+	va_start(args, format);
 
 	if (!format)
 	{
@@ -35,24 +35,23 @@ int _printf(const char *format, ...)
 				i += 2;
 				continue;
 			}
-			/*else
+			else
 			{
 				i += 1;
-				func = get_op_func(format[i]);
+				func = get_op_func(*(format + i));
 
 				if(!func)
 				{
-					write(2, Error, 5);
 					exit(99);
 				}
 				func(va_arg(args, char *));
-				printf("%c\n" va_arg(args, char));
-			}*/
+				i += 1;
+			}
 		}
 		_putchar(format[i]);
 		i++;
 	}
-	/*va_end(args);*/
+	va_end(args);
 
 	return (strlen(format));
 }
