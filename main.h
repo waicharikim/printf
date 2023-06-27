@@ -16,15 +16,15 @@
 typedef struct op
 {
 	char *op;
-	void (*f)(char);
+	int (*f)(va_list);
 }op_t;
 
 /* prototypes */
 int _printf(const char *format, ...);
-void percent(char *s);
-void character(char *c);
-void string(char *s);
-int (*get_op_func(char *s))(char *);
+int percent(va_list type);
+int character(va_list type);
+int string(va_list type);
+int get_op_func(const char *, int *, va_list args);
 int _putchar(char c);
 
 #endif

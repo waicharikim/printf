@@ -6,23 +6,24 @@
  * Return: pointer to the function that corresponds to the specifier
  */
 
-int get_op_func(char *s)(char *)
+int get_op_func(const char *fmt, int *j, va_list args)
 {
+	int i;
+
 	op_t ops[] = {
 		{"%", percent},
 		{"c", character},
 		{"s", string}, 
 		{NULL, NULL}
 	};
-	int i;
 
 	i = 0;
-	while (ops[i].op, s)
+	while (ops[i].op)
 	{
-		if (strcmp(ops[i].op, s) == 0)
-			return (ops[i].f);
+		if (fmt[*j] == ops[i].op) 
+			ops[i].f(args);
 		i++;
 	}
 
-	return (NULL);
+	return (0);
 }

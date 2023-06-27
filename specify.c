@@ -2,45 +2,56 @@
 
 /**
  * percent - prints perent
- * @s: format specify to check
+ * @type: format specify to check
  */
 
-void percent(char *s)
+int percent(va_list type)
 {
+	char s;
+	
+	s = va_arg(type, int);
+
 	if (!s)
 	{
 		exit(99);
 	}
-	else if (*s == 37)
+	else if (s == 37)
 		_putchar(37);
-	return;
+	return (0);
 }
 
 /**
  * character - prints character
- * @c: mem address to print
+ * @type: mem address to print
  */
 
-void character(char *c)
+int character(va_list type)
 {
+	char c;
+	
+	c = va_arg(type, int);
+
 	if (!c)
 	{
 		exit(99);
 	}
 	else
-		_putchar(*c);
+		_putchar(c);
 
-	return;
+	return(0);
 }
 
 /**
  * string - prints string
- * @s: string litteral to print
+ * @type: string litteral to print
  */
 
-void string(char *s)
+int string(va_list type)
 {
 	int i;
+	char *s;
+	
+	s = va_arg(type, char *);
 
 	if (!s)
 	{
@@ -56,6 +67,6 @@ void string(char *s)
 			i++;
 		}
 	}
-	return;
+	return(0);
 }
 

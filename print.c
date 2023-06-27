@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	int (*func)(char *);
 	va_list args;
 
 	va_start(args, format);
@@ -38,13 +37,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				i += 1;
-				func = get_op_func(*(format + i));
-
-				if(!func)
-				{
-					exit(99);
-				}
-				func(va_arg(args, char *));
+				get_op_func(format, &i, args);
 				i += 1;
 			}
 		}
