@@ -3,12 +3,24 @@
 
 
 /**
- * _printc - print a character
- * @arg: variadic parameter
+ * _prints - print a character
+ * @arg: variadic list
  *
  * Return: output count
  */
 int _prints(va_list arg)
 {
-	return(0);
+	char *str;
+	int count;
+
+	count = 0;
+
+	str = va_arg(arg, char *);
+	while (str)
+	{
+		_putchar(*str);
+		count++;
+		str = va_arg(arg, char *);
+	}
+		return (count);
 }
