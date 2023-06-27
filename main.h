@@ -16,7 +16,7 @@
 typedef struct op
 {
 	char *op;
-	void (*f)(char);
+	int (*f)(char);
 }op_t;
 
 /* prototypes */
@@ -27,5 +27,7 @@ void string(char *s);
 int (*get_op_func(char *s))(char *);
 int (*spec_check(char *))(va_list);
 int _putchar(char c);
-
+int _printc(va_list);
+int _prints(va_list);
+int _printpc(va_list);
 #endif
