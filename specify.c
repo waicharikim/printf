@@ -3,12 +3,13 @@
 /**
  * percent - prints perent
  * @type: format specify to check
+ * Return: 0
  */
 
 int percent(va_list type)
 {
 	char s;
-	
+
 	s = va_arg(type, int);
 
 	if (!s)
@@ -23,12 +24,13 @@ int percent(va_list type)
 /**
  * character - prints character
  * @type: mem address to print
+ * Return: 0
  */
 
 int character(va_list type)
 {
 	char c;
-	
+
 	c = va_arg(type, int);
 
 	if (!c)
@@ -38,19 +40,20 @@ int character(va_list type)
 	else
 		_putchar(c);
 
-	return(0);
+	return (0);
 }
 
 /**
  * string - prints string
  * @type: string litteral to print
+ * Return: 0
  */
 
 int string(va_list type)
 {
 	int i;
 	char *s;
-	
+
 	s = va_arg(type, char *);
 
 	if (!s)
@@ -67,6 +70,5 @@ int string(va_list type)
 			i++;
 		}
 	}
-	return(0);
+	return (0);
 }
-
