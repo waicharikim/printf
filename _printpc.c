@@ -3,12 +3,17 @@
 
 
 /**
- * _printc - print a character
+ * _prints - print a character
  * @args: variadic parameter
  *
  * Return: output count
  */
-int _printpc(va_list args)
+int _printpc(__attribute__ ((unused)) va_list args)
 {
-	return(0);
+	int count;
+
+	count = 0;
+	_putchar(37);
+	count++;
+	return(count);
 }
