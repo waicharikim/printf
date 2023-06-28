@@ -94,7 +94,7 @@ int number(va_list type)
 	{
 		while (num > 0)
 		{
-		 	_putchar((num % 10) + '0');
+			_putchar((num % 10) + '0');
 			num = num / 10;
 		}
 	}
