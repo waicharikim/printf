@@ -17,8 +17,7 @@ int get_op_func(const char *fmt, int *j, va_list args)
 		{"d", number},
 		{"%", percent},
 		{"c", character},
-		{"s", string},
-		{NULL, NULL}
+		{"s", string}
 	};
 
 	i = 0;
@@ -27,12 +26,6 @@ int get_op_func(const char *fmt, int *j, va_list args)
 		if (fmt[*j] == *(ops[i].op))
 			return (ops[i].f(args));
 		i++;
-	}
-
-	if (*(ops[i].op) == '\0')
-	{
-		if (fmt[*j] == '\0')
-			return (write(1, "(null)", 6));
 	}
 
 	return (0);
