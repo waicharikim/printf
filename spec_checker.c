@@ -20,7 +20,7 @@ int (*spec_check(const char *c))(va_list)
 		{"i", _printd},
 		{"b", _printb}};
 
-		for (i = 0; i < 3; i++)
+		for (i = 0; i < 6; i++)
 		{
 			if (*(spec_list[i].op) == *c)
 			{
