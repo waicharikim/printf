@@ -17,7 +17,7 @@ int _printd(va_list arg)
 	n = va_arg(arg, long int);
 	if (n < 0)
         {
-                _putchar('-');
+                _putchar(45);
 		count++;
                 n = n * -1;
                 _putchar((n / 10) + 48);
