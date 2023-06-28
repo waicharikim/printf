@@ -10,11 +10,11 @@
  */
 int _printd(va_list arg)
 {
-	int n;
+	long int n;
 	int count;
 
 	count = 0;
-	n = va_arg(arg, int);
+	n = va_arg(arg, long int);
 	if (n < 0)
         {
                 _putchar('-');
@@ -22,7 +22,6 @@ int _printd(va_list arg)
                 n = n * -1;
                 _putchar((n / 10) + 48);
 		count++;
- 
                 _putchar((n % 10) + 48);
 		count++;
 		return (count);
