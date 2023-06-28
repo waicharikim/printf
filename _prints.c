@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-
-
 /**
  * _prints - print a character
  * @arg: variadic list
