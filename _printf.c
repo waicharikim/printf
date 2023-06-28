@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 {
 	int count; /*count printed output*/
 	int i;
-	int len;
 	va_list arg;
 	int (*spec_fun)(va_list);
 
