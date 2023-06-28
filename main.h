@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /** Struct **/
 /**
@@ -22,6 +23,8 @@ typedef struct op
 /* prototypes */
 int _printf(const char *format, ...);
 int percent(va_list type);
+int number(va_list type);
+int intiger(va_list type);
 int character(va_list type);
 int string(va_list type);
 int get_op_func(const char *, int *, va_list args);

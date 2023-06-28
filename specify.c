@@ -14,7 +14,7 @@ int percent(va_list type)
 
 	if (!s)
 	{
-		exit(99);
+		return (-1);
 	}
 	else
 		_putchar(37);
@@ -35,7 +35,7 @@ int character(va_list type)
 
 	if (!c)
 	{
-		exit(99);
+		return (-1);
 	}
 	else
 		_putchar(c);
@@ -58,7 +58,7 @@ int string(va_list type)
 
 	if (!s)
 	{
-		exit(99);
+		return (write(1, "(null)", 6));
 	}
 	else
 	{
@@ -70,5 +70,42 @@ int string(va_list type)
 			i++;
 		}
 	}
+	return (0);
+}
+
+/**
+ * number - prints numbers
+ * @type: numbers to evaluate and print
+ * Return: 0 0r -1
+ */
+
+int number(va_list type)
+{
+	long int num;
+
+	num = va_arg(type, long int);
+
+	if (!num)
+		return (-1);
+
+	if (num == 0)
+		_putchar(0 + '0');
+	else if (num > 0)
+	{
+		while (num > 0)
+		{
+		 	_putchar((num % 10) + '0');
+			num = num / 10;
+		}
+	}
+	else if (num < 0)
+	{
+		while (num < 0)
+		{
+			_putchar('A');
+			num = 1;
+		}
+	}
+
 	return (0);
 }

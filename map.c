@@ -13,6 +13,8 @@ int get_op_func(const char *fmt, int *j, va_list args)
 	int i;
 
 	op_t ops[] = {
+		{"i", number},
+		{"d", number},
 		{"%", percent},
 		{"c", character},
 		{"s", string},
@@ -23,8 +25,14 @@ int get_op_func(const char *fmt, int *j, va_list args)
 	while (ops[i].op)
 	{
 		if (fmt[*j] == *(ops[i].op))
-			ops[i].f(args);
+			return (ops[i].f(args));
 		i++;
+	}
+
+	if (*(ops[i].op) == '\0')
+	{
+		if (fmt[*j] == '\0')
+			return (write(1, "(null)", 6));
 	}
 
 	return (0);

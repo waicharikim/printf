@@ -28,12 +28,6 @@ int _printf(const char *format, ...)
 				_putchar(37);
 				continue;
 			}
-			/*if (format[i + 1] == 37)
-			{
-				_putchar(37);
-				i += 2;
-				continue;
-			}*/
 			else
 			{
 				i += 1;
