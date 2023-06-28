@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /** Struct **/
 /**
@@ -17,19 +18,21 @@ typedef struct op
 {
 	char *op;
 	int (*f)(va_list);
-}op_t;
+} op_t;
 
 /* prototypes */
 int _printf(const char *format, ...);
-void percent(char *s);
-void character(char *c);
-void string(char *s);
-int (*get_op_func(char *s))(char *);
-int (*spec_check(const char *))(va_list);
+int percent(va_list type);
+int number(va_list type);
+int intiger(va_list type);
+int character(va_list type);
+int string(va_list type);
+int get_op_func(const char *, int *, va_list args);
 int _putchar(char c);
 int _printc(va_list);
 int _prints(va_list);
 int _printpc(va_list);
 int _printd(va_list);
 int _printb(va_list);
+
 #endif
