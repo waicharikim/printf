@@ -7,7 +7,6 @@
  *
  * Return: number of characters printed excluding null byte
  */
-int (*spec_check(const char *))(va_list);
 
 int _printf(const char *format, ...)
 {
@@ -21,8 +20,7 @@ int _printf(const char *format, ...)
 	i = 0;
 	count = 0;
 
-	while (format[i]) /* iterate through the
-			     string format while format != NULL */
+	while (format[i]) /* iterate through the string format while format != NULL*/
 	{
 		if (format[i] != 37 && format[i] != 92)/* only print if != '\' or '%'*/
 		{
@@ -44,21 +42,10 @@ int _printf(const char *format, ...)
 		else
 			if (format[i] == 92)
 			{
-				if (format[i + 1] == 37)
-				{
-					_putchar(format[i]);
-					count ++;
-					i++;
-					continue;
-				}
-				else
-				{
-					putchar(format[i]);
-					count++;
-					i++;
-					continue;
-				}
-				/*handle escape characters*/
+				putchar(format[i]);
+				count++;
+				i++;
+				continue; /*handle escape characters*/
 			}
 	}
 	va_end(arg);

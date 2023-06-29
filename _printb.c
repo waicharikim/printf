@@ -3,8 +3,8 @@
 
 
 /**
- * _printc - print a character
- * @args: variadic parameter
+ * _printb - print a character
+ * @arg: variadic parameter
  *
  * Return: output count
  */

@@ -4,7 +4,7 @@
 
 /**
  * _printc - print a character
- * @args: variadic parameter
+ * @arg: variadic parameter
  *
  * Return: output count
  */
@@ -18,7 +18,7 @@ int _printc(va_list arg)
 	if (c)
 	{
 		_putchar(c);
-		return(count++);
+		return (count++);
 	}
 	return (0);
 }

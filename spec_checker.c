@@ -6,7 +6,6 @@
  * @c: characterto check
  *
  * Return: pointer to function that matches the format specifier
-
  */
 
 int (*spec_check(const char *c))(va_list)
@@ -28,5 +27,5 @@ int (*spec_check(const char *c))(va_list)
 
 			}
 		}
-	return(NULL);
+	return (NULL);
 }

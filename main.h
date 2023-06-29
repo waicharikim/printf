@@ -17,13 +17,10 @@ typedef struct op
 {
 	char *op;
 	int (*f)(va_list);
-}op_t;
+} op_t;
 
 /* prototypes */
 int _printf(const char *format, ...);
-void percent(char *s);
-void character(char *c);
-void string(char *s);
 int (*get_op_func(char *s))(char *);
 int (*spec_check(const char *))(va_list);
 int _putchar(char c);
